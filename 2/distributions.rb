@@ -20,9 +20,8 @@ end
 puts twos * threes
 
 # Part two
-prototypes = candidates.permutation(2).find do |a, b|
-  DamerauLevenshtein.distance(a, b) == 1
-end
+prototypes = candidates.combination(2)
+                       .find { |a, b| DamerauLevenshtein.distance(a, b) == 1 }
 
 first = prototypes[0].split('')
 second = prototypes[1].split('')
