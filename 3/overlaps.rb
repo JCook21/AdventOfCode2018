@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 require 'set'
 
+# Value object representing a fabric square in advent of code day 3
 class FabricSquare
   alias == eql?
   attr_accessor :id
