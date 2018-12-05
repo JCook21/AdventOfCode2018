@@ -2,7 +2,7 @@
 require 'set'
 
 class FabricSquare
-  alias_method :==, :eql?
+  alias == eql?
   attr_accessor :id
   @regexp = /(\d+)\s@\s(\d+),(\d+):\s(\d+)x(\d+)/
   def initialize(x, y, id)
